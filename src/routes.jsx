@@ -3,6 +3,7 @@ import { Route, IndexRoute, Router } from 'react-router';
 import HomePage from './components/home/HomePage';
 import App from './App';
 import AboutPage from './components/about/AboutPage';
+import CoursesPage from './components/courses/CoursesPage';
 
 
 
@@ -15,6 +16,7 @@ export default (
         {/* when nothing is specified children=Homepage */}
         <Route path="about" component={AboutPage} />
         {/* on about children=AboutPage */}
+        <Route path="courses" component={CoursesPage} />
     </Router>
 );
 
