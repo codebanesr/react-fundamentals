@@ -20,6 +20,8 @@ class CoursesPage extends Component{
 
     onClickSave(){
         this.props.dispatch(courseActions.createCourse(this.state.course));
+
+        // the input to dispatch is an action, now there is only one reducer that is the root reducer so we dont have to explictly define a reducer as we did with the action, thats what dispatch will do here it will pass the action to the root reducer
     }
 
     onTitleChange(event){
@@ -42,7 +44,7 @@ class CoursesPage extends Component{
                 <h2>Add Courses</h2>
 
                 <input type="text" onChange={this.onTitleChange} value={this.state.course.title}/>
-
+                
 
                 <input type="button" class="btn btn-primary btn-sm" value="save" onClick={this.onClickSave}/>
             </div>
